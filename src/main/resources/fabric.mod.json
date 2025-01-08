@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "lhm-mod",
+	"version": "${version}",
+	"name": "lhm mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/lhm-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.lhm_mod.LhmMod"
+		],
+		"client": [
+			"name.lhm_mod.LhmModClient"
+		],
+		"fabric-datagen": [
+			"name.lhm_mod.LhmModDataGenerator"
+		]
+	},
+	"mixins": [
+		"lhm-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
