@@ -22,9 +22,9 @@ public class LhmRenderer extends MobEntityRenderer<LhmEntity,LhmModel<LhmEntity>
     public void render(LhmEntity livingEntity, float f, float g, MatrixStack matrixStack,
                        VertexConsumerProvider vertexConsumerProvider,int i){
         if(livingEntity.isBaby()){
-            matrixStack.scale(0.5f,0.5f,0.5f);
+            matrixStack.scale(0.05f,0.05f,0.05f);
         }else{
-            matrixStack.scale(1f,1f,1f);
+            matrixStack.scale(0.1f,0.1f,0.1f);
         }
         super.render(livingEntity,f,g,matrixStack,vertexConsumerProvider,i);
     }

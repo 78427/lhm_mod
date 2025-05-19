@@ -1,5 +1,6 @@
 {
-  "item.lhm-mod.lhm_boyfriend": "lhm's boyfriend",
+  "item.lhm-mod.lhm_boyfriend": "lhm's husband",
   "itemgroup.lhm-mod.lhm": "lhm mod",
-  "entity.lhm-mod.lhm": "Lhm"
+  "entity.lhm-mod.lhm": "Lhm",
+  "item.lhm-mod.lhm_spawm_egg": "lhm's spawn egg"
 }

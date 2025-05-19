@@ -28,18 +28,18 @@ public class LhmEntity extends AnimalEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(0,new SwimGoal(this));
-        this.goalSelector.add(1,new TemptGoal(this,10D, Ingredient.ofItems(ModItems.LHMBOYFRIEND),false));
+        this.goalSelector.add(1,new TemptGoal(this,1.25D, Ingredient.ofItems(ModItems.LHMBOYFRIEND),false));
         this.goalSelector.add(2,new AnimalMateGoal(this,1.15D));
         this.goalSelector.add(3,new FollowParentGoal(this,1.1D));
-        this.goalSelector.add(3,new WanderAroundFarGoal(this,1.0D));
+        this.goalSelector.add(3,new WanderAroundFarGoal(this,0.5D));
         this.goalSelector.add(4,new LookAtEntityGoal(this, PlayerEntity.class,10.0F));
-        this.goalSelector.add(5,new LookAroundGoal(this));
+        this.goalSelector.add(6,new LookAroundGoal(this));
     }
 
     public static DefaultAttributeContainer.Builder createAttributes(){
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH,1)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.4)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.3)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE,20);
     }
 
@@ -66,7 +66,7 @@ public class LhmEntity extends AnimalEntity {
         }
     }
     @Override
-    public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+    public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.Lhm.create(world);
     }
 }
